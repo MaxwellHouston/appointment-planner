@@ -12,11 +12,11 @@ export const AppointmentForm = (props) => {
   return (
     <form onSubmit={props.handleSubmit}>
       <p>Enter title:</p>
-      <input value={props.title} onChange={props.handleTitle}/>
+      <input value={props.title} onChange={props.handleTitle} required />
       <p>Enter appointment date:</p>
-      <input type='date' value={props.date} onChange={props.handleDate} min={today} />
+      <input type='date' value={props.date} onChange={props.handleDate} min={today} required />
       <p>Enter appointment time:</p>
-      <input type='time' value={props.time} onChange={props.handleTime} />
+      <input type='time' value={props.time} onChange={props.handleTime} required />
       <p>Select contact:</p>
       <ContactPicker contacts={props.contacts} handleContact={props.handleContact} />
       

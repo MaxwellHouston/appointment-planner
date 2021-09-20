@@ -11,7 +11,7 @@ export const ContactPicker = (props) => {
   }
 
   return (
-    <select onChange={props.handleContact}>
+    <select onChange={props.handleContact} required>
       <option value='' />
       {renderContacts(props.contacts)}
     </select>
